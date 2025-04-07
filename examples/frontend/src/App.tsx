@@ -18,42 +18,66 @@ import Feeds from './AllowlistView';
 
 function LandingPage() {
   return (
-    <Grid columns="2" gap="4">
-      <Card>
-        <Flex direction="column" gap="2" align="center" style={{ height: '100%' }}>
-          <div style={{ textAlign: 'center' }}>
-            <h2>Allowlist Example</h2>
-            <p>
-              Shows how a creator can define an allowlist based access. The creator first creates an
-              allowlist and can add or remove users in the list. The creator can then associate
-              encrypted files to the allowlist. Only users in the allowlist have access to decrypt
-              the files.
-            </p>
-          </div>
+    <Flex direction="column" align="center" gap="6" style={{ textAlign: 'center', marginTop: '2rem' }}>
+      <h1 style={{ fontSize: '2.5rem', color: 'white' }}>SealSui Testnet by Santri Mairil</h1>
+
+      {/* Logo */}
+      <img
+        src="/santri-mairil-logo.jpg"
+        alt="Santri Mairil Logo"
+        style={{ width: '150px', borderRadius: '50%' }}
+      />
+
+      <h2 style={{ fontSize: '1.5rem', color: 'white' }}>Community Team</h2>
+
+      {/* Twitter Only */}
+      <Flex gap="4" justify="center">
+        <a href="https://x.com/santrimairil" target="_blank" rel="noopener noreferrer">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/twitterx--v1.png" alt="Twitter" style={{ width: '32px' }} />
+        </a>
+      </Flex>
+
+      {/* Grid for Try Sections */}
+      <Grid columns="2" gap="6" style={{ width: '80%' }}>
+        {/* TRY Allowlist */}
+        <Card>
+          <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>TRY Allowlist</h3>
+          <p><strong>Tutorial</strong></p>
+          <ol style={{ textAlign: 'left' }}>
+            <li>Click 'Try it'</li>
+            <li>Create Your Name Allow List</li>
+            <li>Add New Sui Wallet</li>
+            <li>Select Walrus service</li>
+            <li>Upload file</li>
+            <li>Click 'First step: Encrypt and upload to Walrus'</li>
+            <li>Click 'Second step: Associate file to Sui object'</li>
+            <li>Done</li>
+          </ol>
           <Link to="/allowlist-example">
             <Button size="3">Try it</Button>
           </Link>
-        </Flex>
-      </Card>
-      <Card>
-        <Flex direction="column" gap="2" align="center" style={{ height: '100%' }}>
-          <div style={{ textAlign: 'center' }}>
-            <h2>Subscription Example</h2>
-            <p>
-              Shows how a creator can define a subscription based access to its published files. The
-              creator defines subcription fee and how long a subscription is valid for. The creator
-              can then associate encrypted files to the service. Only users who have purchased a
-              subscription (NFT) have access to decrypt the files, along with the condition that the
-              subscription must not have expired (i.e. the subscription creation timestamp plus the
-              TTL is smaller than the current clock time).
-            </p>
-          </div>
+        </Card>
+
+        {/* TRY Subscription */}
+        <Card>
+          <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>TRY Subscription</h3>
+          <p><strong>Tutorial</strong></p>
+          <ol style={{ textAlign: 'left' }}>
+            <li>Click 'Try it'</li>
+            <li>Enter Price in Mist</li>
+            <li>Subscription duration in minutes</li>
+            <li>Name of the Service</li>
+            <li>Click Create Service</li>
+            <li>Click 'this link'</li>
+            <li>Click and Download Decrypt</li>
+            <li>Done</li>
+          </ol>
           <Link to="/subscription-example">
             <Button size="3">Try it</Button>
           </Link>
-        </Flex>
-      </Card>
-    </Grid>
+        </Card>
+      </Grid>
+    </Flex>
   );
 }
 
